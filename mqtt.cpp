@@ -2,6 +2,9 @@
 
 #include "mqtt.h"
 
+namespace vmqtt
+{
+
 void MqttController::test()
 {
 }
@@ -41,4 +44,6 @@ bool MqttController::protocol_handler(task_t *co, char *buf, size_t nbyte)
 
     printf("write ret: %d, errno: %d\n", ret, errno);
     return ret > 0 || (-1 == ret && EAGAIN == errno);
+}
+
 }

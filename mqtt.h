@@ -1,7 +1,5 @@
 
-
-#ifndef __V_MQTT_H__
-#define __V_MQTT_H__
+#pragma once
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -19,20 +17,24 @@
 #include <sys/wait.h>
 
 #include "libco/co_routine.h"
+#include "bytebuf.h"
+
+namespace vmqtt
+{
 
 struct task_t
 {
-    stCoRoutine_t *co;
-    int fd;
-    time_t keep_alive;
-};
+  stCoRoutine_t *co;
+  int fd;
+  time_t keep_alive;
+}; // namespace vmqttstructtask_t
 
 class MqttController
 {
 
-  public:
-    void test();
-    bool protocol_handler(task_t *co, char *buf, size_t nbyte);
+public:
+  void test();
+  bool protocol_handler(task_t *co, char *buf, size_t nbyte);
 };
 
-#endif // header
+} // namespace vmqtt

@@ -3,6 +3,7 @@ project(vmqtt)
 
 # Set cflags
 set(CMAKE_C_FLAGS ${CMAKE_C_FLAGS} -g -fno-strict-aliasing -O2 -Wall -export-dynamic -Wall -pipe  -D_GNU_SOURCE -D_REENTRANT -fPIC -Wno-deprecated -m64)
+#set(CMAKE_CXX_FLAGS "-std=c++11")
 
 
 aux_source_directory(. DIR_ROOT_SRCS)
