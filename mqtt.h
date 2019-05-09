@@ -27,7 +27,7 @@ struct task_t
   stCoRoutine_t *co;
   int fd;
   time_t keep_alive;
-}; // namespace vmqttstructtask_t
+};
 
 class MqttController
 {
