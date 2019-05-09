@@ -175,8 +175,8 @@ int main(int argc, char *argv[])
 	if (argc < 5)
 	{
 		printf("Usage:\n"
-			   "example_echosvr [IP] [PORT] [TASK_COUNT] [PROCESS_COUNT]\n"
-			   "example_echosvr [IP] [PORT] [TASK_COUNT] [PROCESS_COUNT] -d   # daemonize mode\n");
+			   "vmqtt [IP] [PORT] [TASK_COUNT] [PROCESS_COUNT]\n"
+			   "vmqtt [IP] [PORT] [TASK_COUNT] [PROCESS_COUNT] -d   # daemonize mode\n");
 		return -1;
 	}
 	const char *ip = argv[1];
